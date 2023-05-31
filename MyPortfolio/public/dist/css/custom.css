@@ -1,0 +1,121 @@
+body {
+padding-top: 80px;
+
+min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+  h1 {
+  margin-bottom: 30px
+  }
+  .carousel-control .icon-prev, .carousel-control .icon-next {
+   font-size: 100px;
+   position:absolute;
+   top: 200px
+  }
+.carousel-inner .item .carousel-caption {
+position:absolute;
+top: 200px
+}
+.carousel-indicators {
+position: absolute;
+top: 400px;
+}
+.navbar {
+margin-bottom:0;
+}
+
+footer {
+  margin-top: auto;
+  background-color: #201d1d;
+  color: #ffffff;
+  padding: 20px;
+  text-align: right;
+
+}
+
+
+.navbar-nav>li>a {
+line-height: 50px;
+font-size: 16px
+}
+
+.container > h1 {
+text-align: center;
+}
+
+th {
+background-color: #428bca;
+color: #ec8007;
+z-index: 10;
+text-shadow: 1px 1px 1px #fff;
+font-size: 24px;
+}
+
+.badge {
+background-color: #428bca;
+color: #fff;
+font-size: 22px;
+}
+
+
+/* =================================================================== */
+
+/* Style inputs for text area */
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+
+/* Style for submit button */
+input[type=submit] {
+  background-color: #000000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Change color When moving the mouse over the submit button */
+input[type=submit]:hover {
+  background-color: #363199;
+}
+
+
+/* =================================================================== */
+
+/* Add a background color and some padding around the form */
+.container_contact {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* =================================================================== */
+
+.container_home img {vertical-align: middle;}
+
+.container_home .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 60px;
+  margin-bottom: 45px; 
+
+}
