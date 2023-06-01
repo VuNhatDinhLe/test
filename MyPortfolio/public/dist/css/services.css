@@ -42,26 +42,11 @@ text-align: center;
 
 }
 
-.button {
-  border: orange;
-  outline: 5;
-  display: inline-block;
-  padding: 16px;
-  color: rgb(255, 255, 255);
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  margin-left: 0%;
-}
 
-.button:hover {
-  background-color: #555;
-}
 
 .text_block{
-  text-align: justify;
-  padding: 20px;
-  width: 90%;
-  margin-left: 20px;
+  text-align: center;
+  padding: 40px;
+  width: 40%;
+  margin-left: 200px;
 }
