@@ -59,9 +59,9 @@ text-align: center;
   background-color: #555;
 }
 
-.text_block{
+.text_block_projects{
   text-align: justify;
   padding: 20px;
-  width: 90%;
-  margin-left: 20px;
+  width: 80%;
+  margin-left: 40px;
 }

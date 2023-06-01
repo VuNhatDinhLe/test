@@ -41,9 +41,9 @@ html {
 
 
 
-.text_block{
-  text-align: center;
-  padding: 40px;
-  width: 40%;
-  margin-left: 200px;
+.text_block_services{
+  text-align: justify;
+  padding: 20px;
+  width: 80%;
+  margin-left: 40px;
 }
