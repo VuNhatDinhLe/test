@@ -44,60 +44,18 @@ font-size: 22px;
 }
 
 
-/* =================================================================== */
+.back_button{
 
-/* Style inputs for text area */
-input[type=text], select, textarea {
-  width: 100%; 
-  padding: 12px; 
-  border: 1px solid #ccc; 
-  border-radius: 4px; 
-  box-sizing: border-box; 
-  margin-top: 6px; 
-  margin-bottom: 26px; 
-  resize: vertical 
-}
-
-/* Style for submit button */
-input[type=submit] {
   background-color: #000000;
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
-/* Change color When moving the mouse over the submit button */
-input[type=submit]:hover {
-  background-color: #363199;
+.back_button:hover {
+  background-color: #6f6f77;
 }
-
-
-/* =================================================================== */
-
-/* Add a background color and some padding around the form */
-.container_contact {
-  border-radius: 5px;
-  background-color: #ffffff;
-  padding: 40px;
-  margin-left: 0px;
-  margin-bottom: 50px;
-  width: 30%;
-
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.bg-img {
-  /* The image used */
-  background-image: url("/img/home.jpg");
-    /* Control the height of the image */
-
-    /* Center and scale the image nicely */
-    background-position: top;
-}
-
-
