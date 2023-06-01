@@ -26,8 +26,8 @@ html {
 }
 
 .card {
-  box-shadow: 10px 10px 10px 0 rgba(21, 65, 223, 0.2);
-  margin-top: 5%;
+  box-shadow: 10px 10px 10px 10px rgba(21, 65, 223, 0.2);
+  margin-top: 30px;
 }
 
 .container_projects {
@@ -57,4 +57,11 @@ text-align: center;
 
 .button:hover {
   background-color: #555;
+}
+
+.text_block{
+  text-align: justify;
+  padding: 20px;
+  width: 90%;
+  margin-left: 20px;
 }

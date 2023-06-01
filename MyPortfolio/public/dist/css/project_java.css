@@ -1,0 +1,22 @@
+.container_aboutme img {vertical-align: middle;}
+
+.container_aboutme .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  height: 90%;
+  padding: 40px; /* Some padding */
+
+}
+
+.container_aboutme .text {
+  text-align: justify;
+  font-size: 20px;
+  bottom: 10px;
+  font-family: Arial;
+  width: 100%;
+
+}
