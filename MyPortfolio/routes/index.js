@@ -18,6 +18,18 @@ router.get('/projects', function(req, res, next) {
   res.render('projects', { title: 'Express' });
 });
 
+router.get('/project_java', function(req, res, next) {
+  res.render('project_java', { title: 'Express' });
+});
+
+router.get('/project_csharp', function(req, res, next) {
+  res.render('project_csharp', { title: 'Express' });
+});
+
+router.get('/project_design', function(req, res, next) {
+  res.render('project_design', { title: 'Express' });
+});
+
 router.get('/services', function(req, res, next) {
   res.render('services', { title: 'Express' });
 }); 
