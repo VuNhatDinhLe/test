@@ -1,9 +1,8 @@
 body {
 padding-top: 80px;
-
 min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 }
 
 
@@ -27,9 +26,7 @@ line-height: 50px;
 font-size: 16px
 }
 
-.container > h1 {
-text-align: center;
-}
+
 
 th {
 background-color: #428bca;
@@ -166,4 +163,32 @@ text-align: center;
 
 .button:hover {
   background-color: #555;
+}
+
+
+/* =================================================================== */
+
+.container_aboutme img {vertical-align: middle;}
+
+.container_aboutme .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 260px;
+  margin-bottom: 40px; 
+}
+
+.container_aboutme .text {
+  align-content: center;
+  text-align: center;
+  font-size: 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 260px;
+  font-family: Arial;
+  width: 60%;
+
 }
