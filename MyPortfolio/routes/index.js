@@ -7,35 +7,35 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/index', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Home' });
 });
 
 router.get('/about_me', function(req, res, next) {
-  res.render('about_me', { title: 'Express' });
+  res.render('about_me', { title: 'About Me' });
 });
 
 router.get('/projects', function(req, res, next) {
-  res.render('projects', { title: 'Express' });
+  res.render('projects', { title: 'Projects' });
 });
 
 router.get('/project_java', function(req, res, next) {
-  res.render('project_java', { title: 'Express' });
+  res.render('project_java', { title: 'Project Java' });
 });
 
 router.get('/project_csharp', function(req, res, next) {
-  res.render('project_csharp', { title: 'Express' });
+  res.render('project_csharp', { title: 'Project CSharp' });
 });
 
 router.get('/project_design', function(req, res, next) {
-  res.render('project_design', { title: 'Express' });
+  res.render('project_design', { title: 'Project Design' });
 });
 
 router.get('/services', function(req, res, next) {
-  res.render('services', { title: 'Express' });
+  res.render('services', { title: 'Services' });
 }); 
 
 router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Express' });
+  res.render('contact', { title: 'Contact' });
 });
 
 module.exports = router;

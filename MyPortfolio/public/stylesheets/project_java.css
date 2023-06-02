@@ -1,0 +1,69 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.row_projects {
+  margin-left: 0.5%;
+}
+
+.column1 {
+  float: left;
+  width: 62%;
+  height: 90%;
+  margin-bottom: 6px;
+  margin-left: 0.6%;
+  padding: 2px 18px;
+}
+
+.column2 {
+  float: left;
+  width: 35%;
+  margin-bottom: 16px;
+  margin-left: 0.6%;
+  padding: 0 8px;
+}
+@media screen and (max-width: 650px) {
+  .column {
+    width: 10%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 10px 10px 10px 10px rgba(21, 65, 223, 0.2);
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.container_projects {
+text-align: center;
+}
+
+
+
+.title {
+  color: grey;
+  text-align: center;
+
+}
+
+
+
+.text_block1{
+  padding: 10px;
+  text-align: center;
+  margin-left: 10px;
+
+}
+
+.text_block2{
+  text-align: justify;
+  padding: 10px;
+  width: 90%;
+  margin-left: 20px;
+  line-height:250%
+}

@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.row_projects {
+  margin-left: 0.5%;
+}
+
+.column {
+  float: left;
+  width: 32.3%;
+  margin-bottom: 16px;
+  margin-left: 0.6%;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 10%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 10px 10px 10px 10px rgba(21, 65, 223, 0.2);
+  margin-bottom: 30px;
+}
+
+.container_projects {
+text-align: center;
+}
+
+
+
+.title {
+  color: grey;
+  text-align: center;
+
+}
+
+.button {
+  border: orange;
+  outline: 5;
+  display: inline-block;
+  padding: 16px;
+  color: rgb(255, 255, 255);
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  margin-left: 0%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.text_block_projects{
+  text-align: justify;
+  padding: 20px;
+  width: 80%;
+  margin-left: 40px;
+  
+}
