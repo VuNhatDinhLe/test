@@ -1,0 +1,15 @@
+/workspaces/test/chromebook/bin/Debug/net7.0/chromebook
+/workspaces/test/chromebook/bin/Debug/net7.0/chromebook.deps.json
+/workspaces/test/chromebook/bin/Debug/net7.0/chromebook.runtimeconfig.json
+/workspaces/test/chromebook/bin/Debug/net7.0/chromebook.dll
+/workspaces/test/chromebook/bin/Debug/net7.0/chromebook.pdb
+/workspaces/test/chromebook/obj/Debug/net7.0/chromebook.csproj.AssemblyReference.cache
+/workspaces/test/chromebook/obj/Debug/net7.0/chromebook.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/test/chromebook/obj/Debug/net7.0/chromebook.AssemblyInfoInputs.cache
+/workspaces/test/chromebook/obj/Debug/net7.0/chromebook.AssemblyInfo.cs
+/workspaces/test/chromebook/obj/Debug/net7.0/chromebook.csproj.CoreCompileInputs.cache
+/workspaces/test/chromebook/obj/Debug/net7.0/chromebook.dll
+/workspaces/test/chromebook/obj/Debug/net7.0/refint/chromebook.dll
+/workspaces/test/chromebook/obj/Debug/net7.0/chromebook.pdb
+/workspaces/test/chromebook/obj/Debug/net7.0/chromebook.genruntimeconfig.cache
+/workspaces/test/chromebook/obj/Debug/net7.0/ref/chromebook.dll
