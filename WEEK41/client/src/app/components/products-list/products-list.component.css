@@ -1,0 +1,14 @@
+table{
+
+    text-align: left;
+
+    color: blue;
+    border-collapse: collapse;
+}
+
+table td, table th{
+
+    border: 1px solid burlywood;
+    padding: 10px;
+    min-width: auto;
+}

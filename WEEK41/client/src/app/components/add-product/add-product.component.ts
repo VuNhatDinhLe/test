@@ -3,6 +3,7 @@ import { Product } from 'src/app/models/product.model';
 import { Category } from 'src/app/models/category.model';
 import { ProductService } from 'src/app/services/product.service';
 import { CategoryService } from 'src/app/services/category.service';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-add-product',
@@ -19,15 +20,19 @@ export class AddProductComponent implements OnInit {
   };
   submitted = false;
 
-  categories: Category[] = []
 
+  categories : Observable<Category[]> | undefined
 
   constructor(private productService: ProductService, private categoryService: CategoryService) { }
 
   ngOnInit(): void {
-    this.categoryService.getAll().subscribe(categories => {
-      this.categories = categories;
-    });
+    console.log("inside ng");
+    this.reloadData();
+  }
+
+  reloadData(){
+
+    this.categories = this.categoryService.getAll();
   }
 
   saveProduct(): void {
