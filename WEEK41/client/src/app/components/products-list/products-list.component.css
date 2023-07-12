@@ -12,3 +12,9 @@ table td, table th{
     padding: 10px;
     min-width: auto;
 }
+
+.list {
+    text-align: left;
+    max-width: 750px;
+    margin: auto;
+    }
