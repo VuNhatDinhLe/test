@@ -1,4 +1,4 @@
-import { ObjectId } from "mongoose";
+//import { ObjectId } from "mongoose";
 
 export class Product {
 
@@ -8,5 +8,5 @@ export class Product {
   price?: Number;
   published?: boolean;
   category?: string;
-  img_id?:ObjectId
+  //img_id?:ObjectId
 }
