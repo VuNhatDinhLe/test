@@ -1,3 +1,5 @@
+import { ObjectId } from "mongoose";
+
 export class Product {
 
   id?: any;
@@ -5,6 +7,6 @@ export class Product {
   description?: string;
   price?: Number;
   published?: boolean;
-  category?: string
-
+  category?: string;
+  img_id?:ObjectId
 }
