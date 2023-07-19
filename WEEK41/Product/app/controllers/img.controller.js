@@ -1,10 +1,10 @@
 const db = require("../models");
 
-const Products = db.products;
+const Images = db.images;
 
  
 
-// Create and Save a new Product
+// Create and Save a new Categories
 
 exports.create = (req, res) => {
 
@@ -20,29 +20,23 @@ exports.create = (req, res) => {
 
  
 
-  // Create a Product
+  // Create a Categories
 
-  const product = new Products({
+  const image = new Images({
 
     name: req.body.name,
 
-     // description: req.body.description,
-
-      price: req.body.price,
-
-      category: req.body.category,
-
-      published: req.body.published ? req.body.published : false
+     
 
   });
 
  
 
-  // Save Product in the database
+  // Save Categories in the database
 
-  Products
+  Images
 
-    .create(product)
+    .save(image)
 
     .then(data => {
 
@@ -68,7 +62,7 @@ exports.create = (req, res) => {
 
  
 
-// Retrieve all Products from the database.
+// Retrieve all Categories from the database.
 
 exports.findAll = (req, res) => {
 
@@ -78,7 +72,7 @@ exports.findAll = (req, res) => {
 
  
 
-  Products.find(condition)
+  Images.find(condition)
 
     .then(data => {
 
@@ -104,7 +98,7 @@ exports.findAll = (req, res) => {
 
  
 
-// Find a single Product with an id
+// Find a single Categories with an id
 
 exports.findOne = (req, res) => {
 
@@ -112,13 +106,13 @@ exports.findOne = (req, res) => {
 
  
 
-  Products.findById(id)
+  Images.findById(id)
 
     .then(data => {
 
       if (!data)
 
-        res.status(404).send({ message: "Not found Product with id " + id });
+        res.status(404).send({ message: "Not found Categories with id " + id });
 
       else res.send(data);
 
@@ -140,7 +134,7 @@ exports.findOne = (req, res) => {
 
  
 
-// Update a Product by the id in the request
+// Update a Categories by the id in the request
 
 exports.update = (req, res) => {
 
@@ -160,7 +154,7 @@ exports.update = (req, res) => {
 
  
 
-  Products.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+  Images.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
 
     .then(data => {
 
@@ -168,11 +162,11 @@ exports.update = (req, res) => {
 
         res.status(404).send({
 
-          message: `Cannot update Product with id=${id}. Maybe Product was not found!`
+          message: `Cannot update Product with id=${id}. Maybe Categories was not found!`
 
         });
 
-      } else res.send({ message: "Product was updated successfully." });
+      } else res.send({ message: "Category was updated successfully." });
 
     })
 
@@ -192,7 +186,7 @@ exports.update = (req, res) => {
 
  
 
-// Delete a Product with the specified id in the request
+// Delete a Categories with the specified id in the request
 
 exports.delete = (req, res) => {
 
@@ -200,7 +194,7 @@ exports.delete = (req, res) => {
 
  
 
-  Products.findByIdAndRemove(id)
+  Images.findByIdAndRemove(id)
 
     .then(data => {
 
@@ -208,7 +202,7 @@ exports.delete = (req, res) => {
 
         res.status(404).send({
 
-          message: `Cannot delete Product with id=${id}. Maybe Product was not found!`
+          message: `Cannot delete Category with id=${id}. Maybe Category was not found!`
 
         });
 
@@ -216,7 +210,7 @@ exports.delete = (req, res) => {
 
         res.send({
 
-          message: "Product was deleted successfully!"
+          message: "Category was deleted successfully!"
 
         });
 
@@ -228,7 +222,7 @@ exports.delete = (req, res) => {
 
       res.status(500).send({
 
-        message: "Could not delete Product with id=" + id
+        message: "Could not delete Category with id=" + id
 
       });
 
@@ -238,17 +232,17 @@ exports.delete = (req, res) => {
 
  
 
-// Delete all Products from the database.
+// Delete all Categories from the database.
 
 exports.deleteAll = (req, res) => {
 
-   Products.deleteMany({})
+    Images.deleteMany({})
 
     .then(data => {
 
       res.send({
 
-        message: `${data.deletedCount} Products were deleted successfully!`
+        message: `${data.deletedCount} Categories were deleted successfully!`
 
       });
 
@@ -260,7 +254,7 @@ exports.deleteAll = (req, res) => {
 
         message:
 
-          err.message || "Some error occurred while removing all products."
+          err.message || "Some error occurred while removing all categories."
 
       });
 
@@ -272,11 +266,11 @@ exports.deleteAll = (req, res) => {
 
  
 
-// Find all published Products
+// Find all published Categories
 
 exports.findAllPublished = (req, res) => {
 
-   Products.find({ published: true })
+    Images.find({ published: true })
 
     .then(data => {
 
@@ -290,7 +284,7 @@ exports.findAllPublished = (req, res) => {
 
         message:
 
-          err.message || "Some error occurred while retrieving products."
+          err.message || "Some error occurred while retrieving categories."
 
       });
 
