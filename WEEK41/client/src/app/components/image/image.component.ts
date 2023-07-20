@@ -65,7 +65,7 @@ setActiveImage(image: Image, index: number): void {
 this.currentImage = image;
 this.currentIndex = index;
 }
-removeAllImages(): void {
+removeAllProducts(): void {
 this.imageService.deleteAll()
 .subscribe({
 next: (res) => {
