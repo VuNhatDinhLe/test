@@ -35,6 +35,8 @@ console.log(data);
 error: (e) => console.error(e)
 });
 }
+
+
 updatePublished(status: boolean): void {
 const data = {
 name: this.currentImage.name,
