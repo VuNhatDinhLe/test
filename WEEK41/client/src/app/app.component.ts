@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { subscribe } from 'diagnostics_channel';
-import { Observable, Subscriber } from 'rxjs';
+import * as rxjs from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +9,7 @@ import { Observable, Subscriber } from 'rxjs';
 export class AppComponent {
   title = 'client';
 
-  myImage!: Observable<any>;
+  myImage!: rxjs.Observable<any>;
 
   base64code : any;
 
@@ -26,7 +25,7 @@ export class AppComponent {
 
   convertToBase64(file : File){
 
-    const observable = new Observable((subscriber : Subscriber<any>) => {
+    const observable = new rxjs.Observable((subscriber : rxjs.Subscriber<any>) => {
       
       this.readFile(file,subscriber)
     })
@@ -39,7 +38,7 @@ export class AppComponent {
     })
   }
 
-  readFile(file: File, subscriber: Subscriber<any>){
+  readFile(file: File, subscriber: rxjs.Subscriber<any>){
     
     const filereader = new FileReader();
 
