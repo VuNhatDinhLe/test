@@ -1,54 +1,5 @@
 <div *ngIf="viewMode; else editable">
-    <div *ngIf="currentProduct.id">
-      <h4>Info</h4>
-      <div>
-        <img src='{{ "assets/img/" + currentProduct.pic_name }}' height="200" width="200"/>
-      </div>
-      <div>
-        <label><strong>Name:</strong></label> {{ currentProduct.name }}
-      </div>
-      <br/>
-      <div>
-        <label><strong>Description:</strong></label>
-        {{ currentProduct.description }}
-      </div>
-      <br/>
-      <div>
-        <label><strong>Price:</strong></label>
-        CAD $ {{ currentProduct.price }}
-      </div>
-      <br/>
-      <div>
-        <label><strong>Category:</strong></label>
-        {{ currentProduct.category }}
-      </div>
-      <br/>
-      <div>
-        <label><strong>Quantity:</strong></label>
-        {{ currentProduct.quantity }}
-      </div>
-      <br/>
-      <div>
-        <label><strong>Weight:</strong></label>
-        {{ currentProduct.weight }}
-      </div>
-      <br/>
-      <div>
-        <label><strong>Nutrition fact:</strong></label>
-        {{ currentProduct.nutrition_fact }}
-      </div>
-      <a
-        class="badge badge-warning"
-        routerLink="/products/{{ currentProduct.id }}"
-      >
-        Edit
-      </a>
-    </div>
-  
-    <div *ngIf="!currentProduct">
-      <br />
-      <p>Please click on a Product...</p>
-    </div>
+
   </div>
   
   <ng-template #editable>

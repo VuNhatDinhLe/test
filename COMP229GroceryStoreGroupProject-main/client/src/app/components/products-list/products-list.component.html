@@ -64,10 +64,10 @@
     <div class="column-md-3">
       <div class="card" *ngFor="let product of products; let i = index">
         <div class="container_projects">
+          <img src='{{ "assets/img/" + product.pic_name }}' height="200" width="200"/>
 
           <h3>{{ product.name }}</h3>
           <p class="title">{{ product.price}} $</p>
-          <p class="text_block_projects">{{ product.description }}</p>
 
             <!-- click button will be able to direct to sub page-->
             <p><button class="button" 

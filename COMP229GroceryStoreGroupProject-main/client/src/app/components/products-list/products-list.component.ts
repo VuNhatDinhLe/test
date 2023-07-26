@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
 import { ProductService } from 'src/app/services/product.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 
@@ -15,8 +16,11 @@ export class ProductsListComponent implements OnInit {
   currentProduct: Product = {};
   currentIndex = -1;
   name = '';
+  
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService,
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.retrieveProducts();
@@ -42,6 +46,9 @@ export class ProductsListComponent implements OnInit {
   setActiveProduct(product: Product, index: number): void {
     this.currentProduct = product;
     this.currentIndex = index;
+  
+    this.router.navigate(['/products/'+this.currentProduct.id]);
+
   }
 
   removeAllProducts(): void {
