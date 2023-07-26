@@ -1,3 +1,4 @@
+<!--
 <div class="list row">
   <div class="col-md-8">
     <div class="input-group mb-3">
@@ -42,3 +43,40 @@
     ></app-product-details>
   </div>
 </div>
+-->
+
+
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Search by name" [(ngModel)]="name" />
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" (click)="searchName()">
+      Search
+    </button>
+  </div>
+</div>
+
+
+
+<div class="col-md-6">
+  <app-product-details [viewMode]="true" [currentProduct]="currentProduct"></app-product-details>
+</div>
+
+  <div class="row_projects">
+    <div class="column-md-3">
+      <div class="card" *ngFor="let product of products; let i = index">
+        <div class="container_projects">
+          <a routerLink="image" class="nav-link">Contact</a>
+
+          <h3>{{ product.name }}</h3>
+          <p class="title">{{ product.price}} $</p>
+          <p class="text_block_projects">{{ product.description }}</p>
+
+            <!-- click button will be able to direct to sub page-->
+            <p><button class="button" [class.active]="i == currentIndex"
+              (click)="setActiveProduct(product, i)">More Details</button></p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
