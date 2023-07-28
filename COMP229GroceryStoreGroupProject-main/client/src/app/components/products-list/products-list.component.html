@@ -1,48 +1,45 @@
 <div class="input-group mb-3">
   <input type="text" class="form-control" placeholder="Search by name" [(ngModel)]="name" />
   <div class="input-group-append">
-    <button class="btn btn-outline-secondary" type="button" (click)="searchName()">
+    <button class="btn-outline-secondary" type="button" (click)="searchName()">
       Search
     </button>
   </div>
 </div>
 
 
-
-
-<!--
-<div class="row_projects">
-  <div class="column-md-3">
-    <div class="card" *ngFor="let product of products; let i = index">
-      <div class="container_projects">
-        <img src='{{ "assets/img/" + product.pic_name }}' height="200" width="200" />
-
-        <h3>{{ product.name }}</h3>
-        <p class="title">CAD $ {{ product.price}}</p>
-
-        <p><button class="button" [class.active]="i == currentIndex" (click)="setActiveProduct(product, i)">More
-            Details</button></p>
-
+<div class="list row">
+  <div class="col-md-8">
+    <div class="input-group mb-3">
+      <select class="form-control" [(ngModel)]="category">
+        <option *ngFor="let category of categories" [value]="category.name">{{ category.name }}</option>
+      </select>
+      <div class="input-group-append">
+        <button class="btn-outline-secondary" type="button" (click)="searchCategory()">
+          Search Category
+        </button>
+        <button class="btn-outline-secondary" type="button" (click)="refreshList()">
+          Clear
+        </button>
       </div>
-
     </div>
-
   </div>
 </div>
--->
 
-<div class="row_projects">
-  <div *ngFor="let product of products; let i = index">
-    <div class="column">
+<div class="main">
+  <ul class="cards">
+    <li class="cards_item" *ngFor="let product of products; let i = index">
       <div class="card">
-        <div class="container_projects">
-          <img src='{{ "assets/img/" + product.pic_name }}' height="200" width="200" />
-          <h6>{{ product.name }}</h6>
-          <p class="title">CAD $ {{ product.price}}</p>
-          <p><button class="button" [class.active]="i == currentIndex" (click)="setActiveProduct(product, i)">More
-              Details</button></p>
+        <div class="card_image"><img src='{{ "assets/img/" + product.pic_name }}' />
+        </div>
+        <div class="card_content">
+          <h2 class="card_title">{{ product.name }}</h2>
+          <p class="card_text">CAD $ {{ product.price}}</p>
+          <button class="btn card_btn"
+          [class.active]="i == currentIndex" (click)="setActiveProduct(product, i)">
+          Read More</button>
         </div>
       </div>
-    </div>
-  </div>
+    </li>
+  </ul>
 </div>

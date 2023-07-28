@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
 import { ProductService } from 'src/app/services/product.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Category } from 'src/app/models/category.model';
+import { CategoryService } from 'src/app/services/category.service';
 
 
 
@@ -13,17 +15,23 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ProductsListComponent implements OnInit {
 
   products?: Product[];
+  categories: Category[] = []
   currentProduct: Product = {};
   currentIndex = -1;
   name = '';
-  
+  category = '';
+
 
   constructor(private productService: ProductService,
     private route: ActivatedRoute,
-    private router: Router) { }
+    private router: Router,
+    private categoryService: CategoryService) { }
 
   ngOnInit(): void {
     this.retrieveProducts();
+    this.categoryService.getAll().subscribe(categories => {
+      this.categories = categories;
+    });
   }
 
   retrieveProducts(): void {
@@ -36,6 +44,8 @@ export class ProductsListComponent implements OnInit {
         error: (e) => console.error(e)
       });
   }
+
+ 
 
   refreshList(): void {
     this.retrieveProducts();
@@ -67,6 +77,20 @@ export class ProductsListComponent implements OnInit {
     this.currentIndex = -1;
 
     this.productService.findByName(this.name)
+      .subscribe({
+        next: (data: Product[] | undefined) => {
+          this.products = data;
+          console.log(data);
+        },
+        error: (e: any) => console.error(e)
+      });
+  }
+
+  searchCategory(): void {
+    this.currentProduct = {};
+    this.currentIndex = -1;
+
+    this.productService.findByCategory(this.category)
       .subscribe({
         next: (data: Product[] | undefined) => {
           this.products = data;

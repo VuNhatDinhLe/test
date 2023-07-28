@@ -21,6 +21,7 @@ export class ProductService {
     return this.http.get(`${baseUrl}/${id}`);
   }
 
+
   create(data: any): Observable<any> {
     return this.http.post(baseUrl, data);
   }
@@ -39,6 +40,10 @@ export class ProductService {
 
   findByName(name: any): Observable<Product[]> {
     return this.http.get<Product[]>(`${baseUrl}?name=${name}`);
+  }
+
+  findByCategory(category: any): Observable<Product[]> {
+    return this.http.get<Product[]>(`${baseUrl}?category=${category}`);
   }
 
 }
