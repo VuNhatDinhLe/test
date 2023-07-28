@@ -17,6 +17,8 @@ export class ProductsListByCategoryComponent implements OnInit {
   products?: Product[];
   categories: Category[] = []
   currentProduct: Product = {};
+  currentCategory ='';
+
   currentIndex = -1;
   name = '';
   category = '';
@@ -28,11 +30,14 @@ export class ProductsListByCategoryComponent implements OnInit {
     private categoryService: CategoryService) { }
 
   ngOnInit(): void {
-    this.retrieveProducts();
-    this.categoryService.getAll().subscribe(categories => {
-      this.categories = categories;
-    });
-  }
+    this.productService.findByCategory(this.category)
+    .subscribe({
+      next: (data: Product[] | undefined) => {
+        this.products = data;
+        console.log(data);
+      },
+      error: (e: any) => console.error(e)
+    });  }
 
   retrieveProducts(): void {
     this.productService.getAll()
@@ -60,7 +65,19 @@ export class ProductsListByCategoryComponent implements OnInit {
     this.router.navigate(['/products/'+this.currentProduct.id]);
 
   }
-
+  setActiveCategory(category: any, index: number): void {
+    this.currentCategory = category;
+    this.currentIndex = index;
+  
+    this.productService.findByCategory(this.category)
+    .subscribe({
+      next: (data: Product[] | undefined) => {
+        this.products = data;
+        console.log(data);
+      },
+      error: (e: any) => console.error(e)
+    });
+  }
   removeAllProducts(): void {
     this.productService.deleteAll()
       .subscribe({

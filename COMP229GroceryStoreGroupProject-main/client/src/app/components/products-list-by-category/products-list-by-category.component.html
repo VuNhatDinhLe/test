@@ -1,31 +1,3 @@
-<div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Search by name" [(ngModel)]="name" />
-  <div class="input-group-append">
-    <button class="btn-outline-secondary" type="button" (click)="searchName()">
-      Search
-    </button>
-  </div>
-</div>
-
-
-<div class="list row">
-  <div class="col-md-8">
-    <div class="input-group mb-3">
-      <select class="form-control" [(ngModel)]="category">
-        <option *ngFor="let category of categories" [value]="category.name">{{ category.name }}</option>
-      </select>
-      <div class="input-group-append">
-        <button class="btn-outline-secondary" type="button" (click)="searchCategory()">
-          Search Category
-        </button>
-        <button class="btn-outline-secondary" type="button" (click)="refreshList()">
-          Clear
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="main">
   <ul class="cards">
     <li class="cards_item" *ngFor="let product of products; let i = index">

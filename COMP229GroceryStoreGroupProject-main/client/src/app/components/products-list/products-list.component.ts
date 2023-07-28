@@ -6,7 +6,6 @@ import { Category } from 'src/app/models/category.model';
 import { CategoryService } from 'src/app/services/category.service';
 
 
-
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
@@ -15,7 +14,7 @@ import { CategoryService } from 'src/app/services/category.service';
 export class ProductsListComponent implements OnInit {
 
   products?: Product[];
-  categories: Category[] = []
+  categories: Category[] = [];
   currentProduct: Product = {};
   currentIndex = -1;
   name = '';
@@ -90,7 +89,7 @@ export class ProductsListComponent implements OnInit {
     this.currentProduct = {};
     this.currentIndex = -1;
 
-    this.productService.findByCategory(this.category)
+    this.productService.findByCategory("Bakery")
       .subscribe({
         next: (data: Product[] | undefined) => {
           this.products = data;
