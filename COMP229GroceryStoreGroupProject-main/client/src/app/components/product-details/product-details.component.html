@@ -1,8 +1,4 @@
-<div *ngIf="viewMode; else editable">
 
-  </div>
-  
-  <ng-template #editable>
     <div *ngIf="currentProduct.id" class="edit-form">
       <h4>Info</h4>
       <div>
@@ -42,5 +38,4 @@
         {{ currentProduct.nutrition_fact }}
       </div>
     </div>
-  </ng-template>
   

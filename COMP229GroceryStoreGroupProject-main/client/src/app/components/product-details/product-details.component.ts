@@ -30,10 +30,9 @@ export class ProductDetailsComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    if (!this.viewMode) {
-      this.message = '';
+   
       this.getProduct(this.route.snapshot.params["id"]);
-    }
+    
   }
 
 
