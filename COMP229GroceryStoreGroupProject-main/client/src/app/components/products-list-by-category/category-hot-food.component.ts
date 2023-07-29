@@ -8,11 +8,11 @@ import { CategoryService } from 'src/app/services/category.service';
 
 
 @Component({
-  selector: 'app-products-list-by-category',
-  templateUrl: './products-list-by-category.component.html',
-  styleUrls: ['./products-list-by-category.component.css']
+  selector: 'app-category-hot-food',
+  templateUrl: './category-hot-food.component.html',
+  styleUrls: ['./category-hot-food.component.css']
 })
-export class ProductsListByCategoryComponent implements OnInit {
+export class HotFoodCategoryComponent implements OnInit {
 
   products?: Product[];
   categories: Category[] = []
@@ -30,7 +30,7 @@ export class ProductsListByCategoryComponent implements OnInit {
     private categoryService: CategoryService) { }
 
   ngOnInit(): void {
-    this.productService.findByCategory(this.category)
+    this.productService.findByCategory("Hot Foods and Grill")
     .subscribe({
       next: (data: Product[] | undefined) => {
         this.products = data;

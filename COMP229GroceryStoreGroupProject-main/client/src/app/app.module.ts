@@ -10,6 +10,12 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProductsListByCategoryComponent } from './components/products-list-by-category/products-list-by-category.component';
+import { BakeryCategoryComponent } from './components/products-list-by-category/category-bakery.component';
+import { HotFoodCategoryComponent } from './components/products-list-by-category/category-hot-food.component';
+import { ColdFoodCategoryComponent } from './components/products-list-by-category/category-cold-food.component';
+import { CoffeLatteCategoryComponent } from './components/products-list-by-category/category-coffe-latte.component';
+import { BeverageCategoryComponent } from './components/products-list-by-category/category-beverage.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +23,12 @@ import { ProductsListByCategoryComponent } from './components/products-list-by-c
     ProductDetailsComponent,
     ContactComponent,
     ProductsListComponent,
-    ProductsListByCategoryComponent
+    ProductsListByCategoryComponent,
+    BakeryCategoryComponent,
+    HotFoodCategoryComponent,
+    ColdFoodCategoryComponent,
+    CoffeLatteCategoryComponent,
+    BeverageCategoryComponent
   ],
   imports: [
     BrowserModule,
