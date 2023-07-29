@@ -1,14 +1,18 @@
-<div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Search by name" [(ngModel)]="name" />
-  <div class="input-group-append">
-    <button class="btn-outline-secondary" type="button" (click)="searchName()">
-      Search
-    </button>
+
+
+<!--
+
+  <div class="col-md-4">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Search by name" [(ngModel)]="name" />
+    <div class="input-group-append">
+      <button class="btn-outline-secondary" type="button" (click)="searchName()">
+        Search
+      </button>
+    </div>
   </div>
 </div>
 
-
-<div class="list row">
   <div class="col-md-8">
     <div class="input-group mb-3">
       <select class="form-control" [(ngModel)]="category">
@@ -24,9 +28,10 @@
       </div>
     </div>
   </div>
-</div>
 
+  
 <div class="main">
+
   <ul class="cards">
     <li class="cards_item" *ngFor="let product of products; let i = index">
       <div class="card">
@@ -35,11 +40,45 @@
         <div class="card_content">
           <h2 class="card_title">{{ product.name }}</h2>
           <p class="card_text">CAD $ {{ product.price}}</p>
-          <button class="btn card_btn"
-          [class.active]="i == currentIndex" (click)="setActiveProduct(product, i)">
-          Read More</button>
+          <button class="btn card_btn" [class.active]="i == currentIndex" (click)="setActiveProduct(product, i)">
+            Read More</button>
         </div>
       </div>
     </li>
   </ul>
+</div>
+-->
+
+
+<div class="container" >
+    <div class="row">
+        <div class="col-md-4">
+          
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search by name" [(ngModel)]="name" />
+          </div>
+          <div class="input-group-append">
+            <button class="btn-outline-secondary" type="button" (click)="searchName()">
+              Search
+            </button>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <ul class="cards">
+            <li class="cards_item" *ngFor="let product of products; let i = index">
+              <div class="card">
+                <div class="card_image"><img src='{{ "assets/img/" + product.pic_name }}' />
+                </div>
+                <div class="card_content">
+                  <h2 class="card_title">{{ product.name }}</h2>
+                  <p class="card_text">CAD $ {{ product.price}}</p>
+                  <button class="btn card_btn" [class.active]="i == currentIndex" (click)="setActiveProduct(product, i)">
+                    Read More</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </div>
 </div>
