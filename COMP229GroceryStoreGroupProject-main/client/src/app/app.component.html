@@ -13,8 +13,9 @@
                         <a href="#" class="nav-link dropdown-toggle" 
                         data-bs-toggle="dropdown">Products</a>
                         <div class="dropdown-menu">
-                            <button class="dropdown-item"
-                             *ngFor="let category of categories"
+                            <button 
+                            class="dropdown-item"
+                             *ngFor="let category of categories; let i = index"
                              (click)="searchCategory()">{{ category.name }}
                              
                             </button>
