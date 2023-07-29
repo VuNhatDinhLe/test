@@ -28,11 +28,16 @@ export class AppComponent implements OnInit{
       });
     }
 
+    
+  setActiveProduct(product: Product, index: number): void {
+    this.currentProduct = product;
+    this.currentIndex = index;
+  }
     searchCategory(): void {
       this.currentProduct = {};
       this.currentIndex = -1;
   
-      this.productService.findByCategory(this.category)
+      this.productService.findByCategory("Bakery")
         .subscribe({
           next: (data: Product[] | undefined) => {
             this.products = data;

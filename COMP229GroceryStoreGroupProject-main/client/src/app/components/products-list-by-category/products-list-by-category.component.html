@@ -1,4 +1,4 @@
-<div class="main">
+<div class="main" >
   <ul class="cards">
     <li class="cards_item" *ngFor="let product of products; let i = index">
       <div class="card">
@@ -15,3 +15,7 @@
     </li>
   </ul>
 </div>
+<app-product-details
+[viewMode]="true"
+[currentProduct]="currentProduct"
+></app-product-details>

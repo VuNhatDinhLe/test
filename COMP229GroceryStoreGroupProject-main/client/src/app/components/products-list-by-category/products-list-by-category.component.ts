@@ -17,11 +17,11 @@ export class ProductsListByCategoryComponent implements OnInit {
   products?: Product[];
   categories: Category[] = []
   currentProduct: Product = {};
-  currentCategory ='';
+  currentCategory : Category = {};
 
   currentIndex = -1;
   name = '';
-  category = '';
+  category : any;
 
 
   constructor(private productService: ProductService,
@@ -30,7 +30,7 @@ export class ProductsListByCategoryComponent implements OnInit {
     private categoryService: CategoryService) { }
 
   ngOnInit(): void {
-    this.productService.findByCategory(this.category)
+    this.productService.findByCategory("Bakery")
     .subscribe({
       next: (data: Product[] | undefined) => {
         this.products = data;

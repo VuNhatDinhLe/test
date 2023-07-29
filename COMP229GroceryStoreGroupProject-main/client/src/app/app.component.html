@@ -13,7 +13,11 @@
                         <a href="#" class="nav-link dropdown-toggle" 
                         data-bs-toggle="dropdown">Products</a>
                         <div class="dropdown-menu">
-                            <a href="category" class="dropdown-item" *ngFor="let category of categories">{{ category.name }}</a>
+                            <button class="dropdown-item"
+                             *ngFor="let category of categories"
+                             (click)="searchCategory()">{{ category.name }}
+                             
+                            </button>
                             
                         </div>
                       </li>

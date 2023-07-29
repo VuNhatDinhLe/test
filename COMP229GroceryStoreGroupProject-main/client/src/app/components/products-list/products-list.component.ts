@@ -86,10 +86,9 @@ export class ProductsListComponent implements OnInit {
   }
 
   searchCategory(): void {
-    this.currentProduct = {};
-    this.currentIndex = -1;
 
-    this.productService.findByCategory("Bakery")
+
+    this.productService.findByCategory(this.category)
       .subscribe({
         next: (data: Product[] | undefined) => {
           this.products = data;
