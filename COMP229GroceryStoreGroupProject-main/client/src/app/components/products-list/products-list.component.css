@@ -10,8 +10,8 @@
 }
 
 .input-group {
-
-  margin-top: 8%;
+  width: 65%;
+  margin-top: 6%;
 }
 .container{
   margin-top: 5% ;
@@ -31,6 +31,10 @@ img {
   vertical-align: middle;
 }
 
+.banner-vertical{
+margin-top: 7%;
+
+}
 .card_btn {
   color: #ffffff;
   padding: 0.8rem;
@@ -47,7 +51,6 @@ img {
 }
 
 .btn-outline-secondary{
-  
   color: #ffffff;
   padding: 0.4rem;
   font-size: 14px;
@@ -55,7 +58,7 @@ img {
   border-radius: 8px;
   font-weight: 400;
   display: block;
-  width: 50%;
+  width: 30%;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
@@ -125,7 +128,3 @@ img {
   margin-bottom: 1.25rem;    
   font-weight: 400;
 }
-
-
-
-

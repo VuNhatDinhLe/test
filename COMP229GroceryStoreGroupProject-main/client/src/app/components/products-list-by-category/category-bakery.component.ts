@@ -117,4 +117,3 @@ export class BakeryCategoryComponent implements OnInit {
       });
   }
 }
-
