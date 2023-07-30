@@ -90,11 +90,7 @@ margin-top: 7%;
   }
 }
 
-@media (min-width: 56rem) {
-  .cards_item {
-    width: 33%;
-  }
-}
+
 
 .card {
   background-color: white;
