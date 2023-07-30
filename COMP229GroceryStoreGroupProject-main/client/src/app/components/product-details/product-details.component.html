@@ -1,102 +1,28 @@
 
-    <!--
-    <div *ngIf="currentProduct.id" class="edit-form">
-      <h4>Info</h4>
-      <div>
-        <img src='{{ "assets/img/" + currentProduct.pic_name }}' height="200" width="200"/>
-      </div>
-      <div>
-        <label><strong>Name:</strong></label> {{ currentProduct.name }}
-      </div>
-      <br/>
-      <div>
-        <label><strong>Description:</strong></label>
-        {{ currentProduct.description }}
-      </div>
-      <br/>
-      <div>
-        <label><strong>Price:</strong></label>
-        CAD $ {{ currentProduct.price }}
-      </div>
-      <br/>
-      <div>
-        <label><strong>Category:</strong></label>
-        {{ currentProduct.category }}
-      </div>
-      <br/>
-      <div>
-        <label><strong>Quantity:</strong></label>
-        {{ currentProduct.quantity }}
-      </div>
-      <br/>
-      <div>
-        <label><strong>Weight:</strong></label>
-        {{ currentProduct.weight }}
-      </div>
-      <br/>
-      <div>
-        <label><strong>Nutrition fact:</strong></label>
-        {{ currentProduct.nutrition_fact }}
-      </div>
-    </div>
-  -->
 
-  
-  <main class="container">
-     <div *ngIf="currentProduct.id" class="edit-form">
+<main class="container" *ngIf="currentProduct.id">
+  <div class="row" >
 
-    <div class="left-column">
-      <img src='{{ "assets/img/" + currentProduct.pic_name }}'/>
+    <div class="col-md-7"   position="relative">
+      <img src='{{ "assets/img/" + currentProduct.pic_name }}' width="90%" height="auto"/>
     </div>
-   
-   
-    <div class="right-column">
-   
+
+    <div class="col-md-5">
       <div class="product-description">
-        <span>Headphones</span>
-        <h1>Beats EP</h1>
-        <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance</p>
+        <span>{{currentProduct.category}}</span>
+        <h5>{{currentProduct.name}}</h5>
+        <p>{{currentProduct.description}}</p>
       </div>
-   
-      <div class="product-configuration">
-   
-        <div class="product-color">
-          <span>Color</span>
-   
-          <div class="color-choose">
-            <div>
-              <input data-image="red" type="radio" id="red" name="color" value="red" checked>
-              <label for="red"><span></span></label>
-            </div>
-            <div>
-              <input data-image="blue" type="radio" id="blue" name="color" value="blue">
-              <label for="blue"><span></span></label>
-            </div>
-            <div>
-              <input data-image="black" type="radio" id="black" name="color" value="black">
-              <label for="black"><span></span></label>
-            </div>
-          </div>
-   
-        </div>
-   
-        <div class="cable-config">
-          <span>Cable configuration</span>
-   
-          <div class="cable-choose">
-            <button>Straight</button>
-            <button>Coiled</button>
-            <button>Long-coiled</button>
-          </div>
-   
-          <a href="#">How to configurate your headphones</a>
-        </div>
-      </div>
-   
+
       <div class="product-price">
-        <span>148$</span>
+        <span>CAD $ {{currentProduct.price}}</span>
         <a href="#" class="cart-btn">Add to cart</a>
       </div>
     </div>
   </div>
-  </main>
+</main>
+
+
+
+
+
