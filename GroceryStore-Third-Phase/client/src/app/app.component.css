@@ -1,4 +1,13 @@
 .responsive {
     max-width: 100%;
+    background: rgba(0, 0, 0, 0.5);
   }
 
+  .navbar{
+
+    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+    font-style: oblique;
+
+  }
+
+  
