@@ -1,3 +1,9 @@
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .responsive {
     max-width: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -10,4 +16,7 @@
 
   }
 
-  
+  .container{
+  margin-top: 5%;
+    
+  }
