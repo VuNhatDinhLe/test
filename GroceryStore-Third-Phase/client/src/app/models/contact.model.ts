@@ -3,9 +3,10 @@ import { Buffer } from 'buffer/';
 
 export class Contact {
 
-    id?: any;
-    name?: string;
-    description?: string;
-    
-  }
-  
+  id?: any;
+  first_name?: string;
+  last_name?: string;
+  contact_number?: string;
+  email_address?: string;
+  message?: string;
+}

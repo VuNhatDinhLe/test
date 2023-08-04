@@ -1,4 +1,6 @@
 <!--This is a form for users to enter contact information with the website owner-->
+
+<!--
 <div class="bg-img">
   <div class="container_contact">
     <form (ngSubmit)="onSubmit()">
@@ -23,3 +25,62 @@
     </form>
   </div>
 </div>
+-->
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="fname"
+          required
+          [(ngModel)]="contact.first_name"
+          name="fname" />
+       
+      </div>
+
+      <div class="form-group">
+        <label for="lname">Last Name</label>
+        <input
+          class="form-control"
+          id="lname"
+          required
+          [(ngModel)]="contact.last_name"
+          name="lname"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input
+          class="form-control"
+          id="contact"
+          required
+          [(ngModel)]="contact.contact_number"
+          name="contact"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          class="form-control"
+          id="email"
+          required
+          [(ngModel)]="contact.email_address"
+          name="email" />
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Message</label>
+        <textarea  class="form-control" id="message" 
+        name="message" placeholder="Write something.." 
+        style="height:200px" 
+        required
+        [(ngModel)]="contact.message"></textarea>
+      </div>
+
+      <button class="btn-outline-secondary" (click)="onSubmit()">Submit</button>
+    </div>

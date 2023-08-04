@@ -1,6 +1,7 @@
 
 
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Contact } from 'src/app/models/contact.model';
 import { ContactService } from 'src/app/services/contact.service';
 @Component({
@@ -13,11 +14,49 @@ export class ContactComponent implements OnInit {
     currentContact: Contact = {};
     currentIndex = -1;
     name = '';
+    contact: Contact = {
+        first_name: '',
+        last_name: '',
+        contact_number: '',
+        email_address: '',
+        message: '',
+      };
+      submitted = false;
 
-    constructor(private contactService: ContactService) { }
+    constructor(private contactService: ContactService,
+        private route: ActivatedRoute,
+        private router: Router) { }
     ngOnInit(): void {
         this.retrieveContacts();
     }
+    saveContact(): void {
+        if (!this.contact.first_name ||
+            !this.contact.last_name ||
+            !this.contact.contact_number ||
+            !this.contact.email_address ||
+            !this.contact.message) {
+                alert("All five fields are mandatory!");
+                return;
+        }
+        const data = {
+            first_name: this.contact.first_name,
+            last_name: this.contact.last_name,
+            contact_number: this.contact.contact_number,
+            email_address: this.contact.email_address,
+            message: this.contact.message
+        };
+    
+        this.contactService.create(data)
+          .subscribe({
+            next: (res) => {
+              console.log(res);
+              alert("The message was sent successfully!");
+
+            },
+            error: (e) => console.error(e)
+          });
+      }
+
     retrieveContacts(): void {
         this.contactService.getAll()
             .subscribe({
@@ -60,9 +99,10 @@ export class ContactComponent implements OnInit {
             });
     }
 
-    onSubmit()
+    onSubmit(): void
     {
-        alert("The message was sent successfully!");
+        this.saveContact()
+
     }
 }
 

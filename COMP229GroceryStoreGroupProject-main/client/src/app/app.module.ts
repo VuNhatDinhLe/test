@@ -6,8 +6,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+
 import { ContactComponent } from './components/contact/contact.component';
 import { ProductsListByCategoryComponent } from './components/products-list-by-category/products-list-by-category.component';
 import { BakeryCategoryComponent } from './components/products-list-by-category/category-bakery.component';
@@ -22,6 +25,7 @@ import { BeverageCategoryComponent } from './components/products-list-by-categor
     AppComponent,
     ProductDetailsComponent,
     ContactComponent,
+    AddProductComponent,
     ProductsListComponent,
     ProductsListByCategoryComponent,
     BakeryCategoryComponent,
