@@ -3,7 +3,7 @@ const Contacts = db.contacts;
 
 
 exports.create = (req, res) => {
-    if (!req.body.name) {
+    if (!req.body.message ||!req.body.first_name ||!req.body.last_name ) {
         res.status(400).send({ message: "Content can not be empty!" });
         return;
     }
@@ -15,7 +15,7 @@ exports.create = (req, res) => {
         message: req.body.message   });
 
     Contacts
-        .save(contact)
+        .create(contact)
         .then(data => {
             res.send(data);
         })

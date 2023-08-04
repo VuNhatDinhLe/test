@@ -3,7 +3,7 @@ module.exports = app => {
     var router = require("express").Router();
 
     router.post("/", contacts.create);
-    router.get("/", contacts.getAll);
+    router.get("/", contacts.findAll);
     router.get("/:id", contacts.findOne);
     router.put("/:id", contacts.update);
     router.delete("/:id", contacts.delete);
