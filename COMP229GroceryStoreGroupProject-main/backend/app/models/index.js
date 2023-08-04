@@ -13,6 +13,8 @@ db.mongoose = mongoose;
 db.url = dbConfig.url;
 db.products = require("./product.model.js")(mongoose);
 db.categories = require("./category.model.js")(mongoose);
+db.contacts = require("./contact.model.js")(mongoose);
+
 // db.refreshToken = require("./refreshToken.model");
 
 
