@@ -54,21 +54,7 @@ exports.findAll = (req, res) => {
         });
 };
 
-exports.getAll = (req, res) => {
-    const id = req.params.id;
 
-    Contacts.find()
-        .then(data => {
-            if (!data)
-                res.status(404).send({ message: "Not found Contacts with id " + id });
-            else res.send(data);
-        })
-        .catch(err => {
-            res
-                .status(500)
-                .send({ message: "Error retrieving Product with id=" + id });
-        });
-};
 
 exports.findOne = (req, res) => {
     const id = req.params.id;
