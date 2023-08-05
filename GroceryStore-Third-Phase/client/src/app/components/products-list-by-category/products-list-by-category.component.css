@@ -58,7 +58,7 @@ img {
   width: 40%;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.838);
-  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+  background: linear-gradient(to bottom left, #a5bea6 40%, #629760 80%);
   position: relative;
 }
 
@@ -105,7 +105,7 @@ img {
 .card_content {
   height: 100%;
   padding: 1rem;
-  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+  background: linear-gradient(to bottom left, #a5bea6 40%, #629760 80%);
 }
 
 

@@ -11,12 +11,16 @@
 
   .navbar{
 
-    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+   /* background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);*/
     font-style: oblique;
-
-  }
-
-  .container{
-  margin-top: 5%;
-    
+   
+ }
+  .main{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+   /* background-image: url("src/assets/img/banner-horizon.png");*/
+   background-image: url("src/assets/img/banner-horizon.png");
+    background-position: fixed;
+  
   }
