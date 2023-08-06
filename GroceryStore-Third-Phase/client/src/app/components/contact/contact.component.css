@@ -1,21 +1,25 @@
 .submit-form {
     border-radius: 5px;
-    background-color: #ffffff;
     padding: 40px;
     margin-left: 0px;
     margin-bottom: 50px;
-    width: 70%;
-  
+    width: 50%;
+    margin-top: 5%;
   }
+
+  :host{
+    background-image: url("/assets/img/banner-contact.png");
+    background-position: 0px 0px;  
+    background-size: 100%;
+    background-repeat: repeat;
+    position: absolute;
   
+    width: 100vw;
+  }
   * {
     box-sizing: border-box;
   }
-  
-  .bg-img {
-    background-image: url("/img/contact.png");
-    background-position: top;
-  }
+
   
   /* Style inputs for text area */
   input[type=text], select, textarea {
@@ -50,10 +54,10 @@
     border-radius: 8px;
     font-weight: 400;
     display: block;
-    width: 30%;
+    width: 20%;
     cursor: pointer;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+    background: linear-gradient(to bottom left, #a5bea6 40%, #629760 80%);
     position:relative;
   }
   
