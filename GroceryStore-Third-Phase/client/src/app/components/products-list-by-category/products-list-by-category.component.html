@@ -19,7 +19,7 @@
 
         <div class="cards_item">
           <div class="card2">
-            <img src='assets/img/banner-sub-product1.png'/>
+            <img src='assets/img/banner-sub-product1.png' />
           </div>
         </div>
 
@@ -34,11 +34,8 @@
             <img src='assets/img/banner-sub-product3.png' />
           </div>
         </div>
-
+        
       </div>
-
-      
-
         <ul class="cards">
           <li class="cards_item" *ngFor="let product of products; let i = index">
             <div class="card">
@@ -47,6 +44,10 @@
               <div class="card_content">
                 <h2 class="card_title">{{ product.name }}</h2>
                 <p class="card_text">CAD $ {{ product.price}}</p>
+               
+              </div>
+
+              <div class="card_btn_block">
                 <button *ngIf="!showModeratorBoard && !showAdminBoard" class="btn card_btn"
                   [class.active]="i == currentIndex" (click)="setActiveProduct(product, i)">
                   Read More</button>
@@ -54,10 +55,36 @@
                   [class.active]="i == currentIndex" (click)="setActiveProduct(product, i)">
                   Edit</button>
               </div>
+
+
             </div>
           </li>
         </ul>
-      
     </div>
-  </div>
-</div>
+
+
+<!--
+        <div class="product_list">
+          <div class="content" *ngFor="let product of products; let i = index">
+            <div class="product_image"><img src='{{ "assets/img/" + product.pic_name }}' />
+            </div>
+            <div class="product_content">
+              <h2 class="name_title">{{ product.name }}</h2>
+              <p class="price_text">CAD $ {{ product.price}}</p>
+
+          
+
+              <button *ngIf="!showModeratorBoard && !showAdminBoard" class="read_btn"
+                [class.active]="i == currentIndex" (click)="setActiveProduct(product, i)">
+                Read More</button>
+              <button *ngIf="showModeratorBoard || showAdminBoard" class="read_btn"
+                [class.active]="i == currentIndex" (click)="setActiveProduct(product, i)">
+                Edit</button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    -->
