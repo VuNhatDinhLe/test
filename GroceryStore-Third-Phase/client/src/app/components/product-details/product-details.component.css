@@ -1,14 +1,17 @@
 
 /* Basic Styling */
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
+:host{
+  background-image: url("/assets/img/banner-welcome.png");
+  background-position: 0px 0px;  
+  background-size: 100%;
+  background-repeat: repeat;
+  position: absolute;
+
+  width: 100vw;
 }
  
 .container{
-
+  margin-top: 8%;
   margin-bottom: 5%;
 }
 
@@ -84,3 +87,4 @@ html, body {
     top: -85px;
   }
 }
+
