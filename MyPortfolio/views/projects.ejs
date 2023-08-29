@@ -1,63 +1,70 @@
 <%- include ('partials/header.ejs') %>
- <!-- header.ejs contains stylesheets and javascript elements to display a predefined page structure -->
+  <!-- header.ejs contains stylesheets and javascript elements to display a predefined page structure -->
 
-<%- include ('partials/main_nav.ejs') %>
+  <%- include ('partials/main_nav.ejs') %>
 
-  <!-- this file to display Projects Page (contain 3 sub pages /csharp, java, design/ )-->
-<!DOCTYPE html>
-<html>
+    <!-- this file to display Projects Page (contain 3 sub pages /csharp, java, design/ )-->
+    <!DOCTYPE html>
+    <html>
     <title>Projects Page</title>
-<body>
 
-   <!-- display 3 cards containing general information about 3 projects that the page conducted, 
+    <body>
+
+      <!-- display 3 cards containing general information about 3 projects that the page conducted, 
   can be automatically resized  -->
-<div class="row_projects">
-    <div class="column">
-      <div class="card">
-        <img src="/img/project_java1.png" style="width:100%">
-        <div class="container_projects">
-          <h3>Java Student Manager Project</h3>
-          <p class="title">2023</p>
-          <p class="text_block_projects">Use of the JDBC (Java Database Connectivity) tool to connect the database in the Java application to create student management software.</p>
-            <form action="project_java">
-  <!-- click button will be able to direct to sub page-->
-          <p><button class="button">More Details</button></p>
-            </form>
-        </div>
-      </div>
-    </div>
-  
-    <div class="column">
-      <div class="card">
-        <img src="/img/project_design1.png" alt="Mike" style="width:100%">
-        <div class="container_projects">
-          <h3>Software Design Project</h3>
-          <p class="title">2023</p>
-          <p class="text_block_projects">Apply the principles of the MVC model, build diagrams according to popular design patterns to create a software interface on mobile applications and websites for online teaching purposes.</p>
-
-          <form action="project_design">
-            <p><button class="button">More Details</button></p>
+      <div class="row_projects">
+        <div class="column">
+          <div class="card">
+            <img src="/img/project_java1.png" style="width:100%">
+            <div class="container_projects">
+              <h3>Java Student Manager Project</h3>
+              <p class="title">2023</p>
+              <p class="text_block_projects">Use of the JDBC (Java Database Connectivity) tool to connect the database
+                in the Java application to create student management software.</p>
+              <form action="project_java">
+                <!-- click button will be able to direct to sub page-->
+                <p><button class="button">More Details</button></p>
               </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="/img/project_design1.png" alt="Mike" style="width:100%">
+            <div class="container_projects">
+              <h3>Software Design Project</h3>
+              <p class="title">2023</p>
+              <p class="text_block_projects">Apply the principles of the MVC model, build diagrams according to popular
+                design patterns to create a software interface on mobile applications and websites for online teaching
+                purposes.</p>
+
+              <form action="project_design">
+                <p><button class="button">More Details</button></p>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="/img/project_csharp1.png" alt="John" style="width:100%">
+            <div class="container_projects">
+              <h3>CSharp Project</h3>
+              <p class="title">2023</p>
+              <p class="text_block_projects">Use of Microsoft's .Net and Visual Studio to build a sales management
+                program on the basis of C# programming language and SQL Server database management system.</p>
+
+              <form action="project_csharp">
+                <p><button class="button">More Details</button></p>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    
-    <div class="column">
-      <div class="card">
-        <img src="/img/project_csharp1.png" alt="John" style="width:100%">
-        <div class="container_projects">
-          <h3>CSharp Project</h3>
-          <p class="title">2023</p>
-          <p class="text_block_projects">Use of Microsoft's .Net and Visual Studio to build a sales management program on the basis of C# programming language and SQL Server database management system.</p>
+    </body>
 
-          <form action="project_csharp">
-            <p><button class="button">More Details</button></p>
-              </form>        </div>
-      </div>
-    </div>
-  </div>
-  </body>
-</html>
+    </html>
 
 
-<%- include ('partials/footer.ejs') %>
+    <%- include ('partials/footer.ejs') %>
